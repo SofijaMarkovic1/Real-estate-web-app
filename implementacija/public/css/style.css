@@ -1,0 +1,96 @@
+.meni-item{
+    margin-left: 3%;
+    margin-right: 2%;
+    border-right: 2px solid rgb(186, 184, 184);
+    padding: 0%;
+    font-size: 14px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+.header1{
+    background-color: rgb(242, 235, 224);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+.mojNav{
+    font-size: 20px;
+    white-space: nowrap;
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.filters{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    border-left: 2px solid gray;
+    padding: 20px;
+}
+
+  .custom-range::-webkit-slider-thumb {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color */
+  }
+  
+  .custom-range::-moz-range-thumb {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color */
+  }
+  
+  .custom-range::-ms-thumb {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color */
+  }
+  
+  .custom-range::-webkit-slider-thumb:active {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color for the active state */
+  }
+  
+  .custom-range::-moz-range-thumb:active {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color for the active state */
+  }
+  
+  .custom-range::-ms-thumb:active {
+    background-color: rgb(149, 148, 148);; /* Change this to your desired color for the active state */
+  }
+
+  #selectBar {
+    background-color: #f5f5f5;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px;
+    width: 200px;
+  }
+  #transparent-window {
+    padding: 2%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the transparency here */
+    pointer-events: none; /* This allows interaction with the carousel beneath */
+  }
+  #podaci{
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+  }
+
+a {
+    color: black; /* Sets the link color to black */
+    text-decoration: none; /* Removes the default underline */
+}
+
+a:hover {
+    color: black; /* Sets the link color to black */
+    text-decoration: none; /* Removes the default underline */
+}
+
+a:visited {
+    color: black; /* Sets the link color to black */
+    text-decoration: none; /* Removes the default underline */
+}
+
+.pozadina{
+    background-image: url("pozadina2.jpg");
+    opacity: 90%;
+}

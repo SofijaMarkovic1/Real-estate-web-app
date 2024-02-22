@@ -1,0 +1,1623 @@
+{
+  "id": "2f952321-616d-499c-bce1-87afb56068c4",
+  "version": "2.0",
+  "name": "Petar SSU",
+  "url": "http://localhost:8080/index.php/Login/pretraga",
+  "tests": [{
+    "id": "ca8bee8f-7611-478e-bf30-fa4d91bff468",
+    "name": "Filtiranje_TP1",
+    "commands": [{
+      "id": "2b41a47d-de6f-4f3f-a094-369da4debd09",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Guest/pretragaGost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68fcf857-46b8-4eef-b944-061c77834821",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1547x1628",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "316f76c2-456b-461f-a7ed-6e0b6a8a1e1b",
+      "comment": "",
+      "command": "click",
+      "target": "name=grejanja[]",
+      "targets": [
+        ["name=grejanja[]", "name"],
+        ["css=.form-check-input:nth-child(21)", "css:finder"],
+        ["xpath=//input[@name='grejanja[]']", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input[9]", "xpath:idRelative"],
+        ["xpath=//div[2]/input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a0d93a9-f6ea-43e4-82b1-56b5c081fca6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "53463165-be73-418b-8a7c-41834502150f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) .card-text",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) .card-text", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Beograd, Sremčica, Novija dvojna kuća na velikom placu od 1511 m2 u mirnoj ulici - idealno za bazen')]", "xpath:innerText"]
+      ],
+      "value": "Beograd, Sremčica, Novija dvojna kuća na velikom placu od 1511 m2 u mirnoj ulici - idealno za bazen"
+    }, {
+      "id": "61583aa2-b216-4c11-956a-95ea0eea40a6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(2) .card-text",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(2) .card-text", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div[2]/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Objekat u izgradnji na 15ari placa od 410m2+30m2+120m2+bazen (u legaliz.)')]", "xpath:innerText"]
+      ],
+      "value": "Objekat u izgradnji na 15ari placa od 410m2+30m2+120m2+bazen (u legaliz.)"
+    }]
+  }, {
+    "id": "41550f33-76b1-4050-af96-99fbaef7504f",
+    "name": "Filtriranje_TP2",
+    "commands": [{
+      "id": "1224e563-09ba-4236-874d-957c1b9b37aa",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Guest/pretragaGost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "179488e7-f5de-41c9-aa41-715bbcecf25c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1549x1092",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "208d6382-8be0-48a3-a1f6-fcbf0bfce9bc",
+      "comment": "",
+      "command": "click",
+      "target": "name=opreme[]",
+      "targets": [
+        ["name=opreme[]", "name"],
+        ["css=#opremljenostIGrejanje > .form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='opreme[]']", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ecc028f-f91c-41e8-8bc0-4d086c9e64ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=#opremljenostIGrejanje > .form-check-input:nth-child(4)",
+      "targets": [
+        ["css=#opremljenostIGrejanje > .form-check-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@name='opreme[]'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08178cb1-92cd-4843-886f-22caac53c185",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5ae6c066-dd43-499a-9a81-a902acb1fe45",
+    "name": "Filtriranje_TP3",
+    "commands": [{
+      "id": "8099b511-e7b3-4524-a96d-70a719bcab4e",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Guest/pretragaGost",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c404d5d-de54-408b-92f0-197e51e6254e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1503x1582",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a809e7a6-c49b-408a-bfa9-0ea158ab1640",
+      "comment": "",
+      "command": "click",
+      "target": "name=opreme[]",
+      "targets": [
+        ["name=opreme[]", "name"],
+        ["css=#opremljenostIGrejanje > .form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='opreme[]']", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44241dfd-6b15-4069-9ff8-2ccf85d12b25",
+      "comment": "",
+      "command": "click",
+      "target": "name=opstine[]",
+      "targets": [
+        ["name=opstine[]", "name"],
+        ["css=#opstine > .form-check-input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='opstine[]']", "xpath:attributes"],
+        ["xpath=//div[@id='opstine']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dfd911d-c184-42d0-9741-03ad4519ac75",
+      "comment": "",
+      "command": "click",
+      "target": "css=#opremljenostIGrejanje > .form-check-input:nth-child(16)",
+      "targets": [
+        ["css=#opremljenostIGrejanje > .form-check-input:nth-child(16)", "css:finder"],
+        ["xpath=(//input[@name='opreme[]'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input[8]", "xpath:idRelative"],
+        ["xpath=//div[2]/input[8]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a66448e-c61f-46ac-97ce-0ce1b0d7f49a",
+      "comment": "",
+      "command": "click",
+      "target": "name=grejanja[]",
+      "targets": [
+        ["name=grejanja[]", "name"],
+        ["css=.form-check-input:nth-child(21)", "css:finder"],
+        ["xpath=//input[@name='grejanja[]']", "xpath:attributes"],
+        ["xpath=//div[@id='opremljenostIGrejanje']/input[9]", "xpath:idRelative"],
+        ["xpath=//div[2]/input[9]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d6190b2-e5c6-4f70-9863-7d42f9edfff0",
+      "comment": "",
+      "command": "click",
+      "target": "css=#tip > .col-sm-6:nth-child(2) > .form-check-input:nth-child(4)",
+      "targets": [
+        ["css=#tip > .col-sm-6:nth-child(2) > .form-check-input:nth-child(4)", "css:finder"],
+        ["xpath=(//input[@name='stanja[]'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='tip']/div[2]/input[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f85ae5d-716f-4cfe-afe6-8236b6981b8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6049f950-b9e9-4ef3-b84f-b604b9c69fd6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#prazno > p",
+      "targets": [
+        ["css=#prazno > p", "css:finder"],
+        ["xpath=//div[@id='prazno']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ne postoje oglasene nekretnine za zadate filtere!')]", "xpath:innerText"]
+      ],
+      "value": "Ne postoje oglasene nekretnine za zadate filtere!"
+    }]
+  }, {
+    "id": "5eb4255b-4247-4545-9372-8c8550e1537f",
+    "name": "KreiranjeOglasa_TP2",
+    "commands": [{
+      "id": "9beab85f-5d42-4d85-9c4a-f8a67ce4e83d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/oglasiNekretninu",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c2fac22-5e47-475c-aba8-f7acfc7ab491",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2586x1627",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "402d7974-73cc-4640-b281-b742eed5dc3d",
+      "comment": "",
+      "command": "click",
+      "target": "name=nazivoglasa",
+      "targets": [
+        ["name=nazivoglasa", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='nazivoglasa']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c92ef885-f51b-476d-8328-c1f472f0a49e",
+      "comment": "",
+      "command": "type",
+      "target": "name=nazivoglasa",
+      "targets": [
+        ["name=nazivoglasa", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='nazivoglasa']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Mirijevo4 Stan"
+    }, {
+      "id": "6802b42b-b4f4-4aaa-8ca7-595e5337eab7",
+      "comment": "",
+      "command": "click",
+      "target": "name=kvadratura",
+      "targets": [
+        ["name=kvadratura", "name"],
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='kvadratura']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "405184ba-1b42-45bd-8556-f23a3b4bb658",
+      "comment": "",
+      "command": "type",
+      "target": "name=kvadratura",
+      "targets": [
+        ["name=kvadratura", "name"],
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='kvadratura']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "64"
+    }, {
+      "id": "18ca7bd6-5b1b-4708-a771-2625c763418d",
+      "comment": "",
+      "command": "click",
+      "target": "id=poljeZaGrad",
+      "targets": [
+        ["id=poljeZaGrad", "id"],
+        ["name=grad", "name"],
+        ["css=#poljeZaGrad", "css:finder"],
+        ["xpath=//input[@id='poljeZaGrad']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dffcf7c9-8674-4268-8a16-310b7efd148e",
+      "comment": "",
+      "command": "type",
+      "target": "id=poljeZaGrad",
+      "targets": [
+        ["id=poljeZaGrad", "id"],
+        ["name=grad", "name"],
+        ["css=#poljeZaGrad", "css:finder"],
+        ["xpath=//input[@id='poljeZaGrad']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Beograd"
+    }, {
+      "id": "d7a0ec5f-2649-46b4-a3d3-28ec97d978ed",
+      "comment": "",
+      "command": "click",
+      "target": "name=opstina",
+      "targets": [
+        ["name=opstina", "name"],
+        ["css=tr:nth-child(8) input", "css:finder"],
+        ["xpath=//input[@name='opstina']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0f72c4a-4d1c-4462-9c91-99aa9e6bf26a",
+      "comment": "",
+      "command": "type",
+      "target": "name=opstina",
+      "targets": [
+        ["name=opstina", "name"],
+        ["css=tr:nth-child(8) input", "css:finder"],
+        ["xpath=//input[@name='opstina']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Zvezdara"
+    }, {
+      "id": "1484bf03-7318-45f0-83c6-7a42ab36533d",
+      "comment": "",
+      "command": "click",
+      "target": "id=potvrdi",
+      "targets": [
+        ["id=potvrdi", "id"],
+        ["css=#potvrdi", "css:finder"],
+        ["xpath=//button[@id='potvrdi']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25dc49f0-f89f-41d3-9d7b-20aba4645994",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [
+        ["css=.errors li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'The cena field is required.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f942322-677c-4228-b0c9-517cb1e77380",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errors li:nth-child(1)",
+      "targets": [
+        ["css=.errors li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'The cena field is required.')]", "xpath:innerText"]
+      ],
+      "value": "The cena field is required."
+    }, {
+      "id": "d9c31c16-64fd-4fa1-89c0-3bda4f0479a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errors li:nth-child(2)",
+      "targets": [
+        ["css=.errors li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'The brojsoba field is required.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa8df047-5cfa-4892-8524-b07f1a949927",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.errors li:nth-child(2)",
+      "targets": [
+        ["css=.errors li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'The brojsoba field is required.')]", "xpath:innerText"]
+      ],
+      "value": "The brojsoba field is required."
+    }]
+  }, {
+    "id": "f2ea83fb-8d2b-465e-83aa-061299e95c5d",
+    "name": "KreiranjeOglasa_TP3",
+    "commands": [{
+      "id": "70332b9c-2380-4cdc-b660-c9cbec625c82",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/oglasiNekretninu",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9250d7b7-5bee-42ea-9ece-a6ca588b73eb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2590x1630",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38b133aa-c7b8-422d-b234-000aa89be9e8",
+      "comment": "",
+      "command": "click",
+      "target": "name=nazivoglasa",
+      "targets": [
+        ["name=nazivoglasa", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='nazivoglasa']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a650d9b-7a08-422f-abde-6aa4b829eb9e",
+      "comment": "",
+      "command": "type",
+      "target": "name=nazivoglasa",
+      "targets": [
+        ["name=nazivoglasa", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='nazivoglasa']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr/td[2]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Mirijevo4 Stan"
+    }, {
+      "id": "c4037643-a06e-4362-84e7-c1877277f07b",
+      "comment": "",
+      "command": "click",
+      "target": "name=kvadratura",
+      "targets": [
+        ["name=kvadratura", "name"],
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='kvadratura']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc658cc4-a1cd-441b-8d45-fff7563c3d5d",
+      "comment": "",
+      "command": "type",
+      "target": "name=kvadratura",
+      "targets": [
+        ["name=kvadratura", "name"],
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='kvadratura']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[4]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/input", "xpath:position"]
+      ],
+      "value": "64"
+    }, {
+      "id": "26032fbc-471b-4da1-8909-02073e9ab99b",
+      "comment": "",
+      "command": "type",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "2228f0f9-ac0e-4ae9-abfa-645d24997ae5",
+      "comment": "",
+      "command": "click",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c90f066-844d-44cf-8019-356de3db2fb1",
+      "comment": "",
+      "command": "type",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "33fcc89b-7060-41fb-b508-43649c2809b4",
+      "comment": "",
+      "command": "click",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df35f05b-7215-45b9-97cc-e89c39978e27",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47d5fda7-19bb-4dfb-b08d-be5b1f15fc13",
+      "comment": "",
+      "command": "click",
+      "target": "id=poljeZaGrad",
+      "targets": [
+        ["id=poljeZaGrad", "id"],
+        ["name=grad", "name"],
+        ["css=#poljeZaGrad", "css:finder"],
+        ["xpath=//input[@id='poljeZaGrad']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65ac4860-d9b8-4895-8451-9b0765fbd870",
+      "comment": "",
+      "command": "type",
+      "target": "id=poljeZaGrad",
+      "targets": [
+        ["id=poljeZaGrad", "id"],
+        ["name=grad", "name"],
+        ["css=#poljeZaGrad", "css:finder"],
+        ["xpath=//input[@id='poljeZaGrad']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[7]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[7]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Beograd"
+    }, {
+      "id": "3aaaf50d-10e7-4237-b443-5546b229523b",
+      "comment": "",
+      "command": "click",
+      "target": "name=cena",
+      "targets": [
+        ["name=cena", "name"],
+        ["css=tr:nth-child(11) input", "css:finder"],
+        ["xpath=//input[@name='cena']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[11]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[11]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b854570e-72c0-445e-a3c9-eda4e9e998a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=cena",
+      "targets": [
+        ["name=cena", "name"],
+        ["css=tr:nth-child(11) input", "css:finder"],
+        ["xpath=//input[@name='cena']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[11]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[11]/td[2]/input", "xpath:position"]
+      ],
+      "value": "90000"
+    }, {
+      "id": "16c29574-bb6f-4f38-9f62-32afcf999080",
+      "comment": "",
+      "command": "click",
+      "target": "name=adresa",
+      "targets": [
+        ["name=adresa", "name"],
+        ["css=tr:nth-child(9) input", "css:finder"],
+        ["xpath=//input[@name='adresa']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[9]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[9]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a153081c-09df-47f0-b27a-ac72ed492f91",
+      "comment": "",
+      "command": "click",
+      "target": "name=opstina",
+      "targets": [
+        ["name=opstina", "name"],
+        ["css=tr:nth-child(8) input", "css:finder"],
+        ["xpath=//input[@name='opstina']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02851898-7724-4d94-8fd8-99798b6f68a8",
+      "comment": "",
+      "command": "type",
+      "target": "name=opstina",
+      "targets": [
+        ["name=opstina", "name"],
+        ["css=tr:nth-child(8) input", "css:finder"],
+        ["xpath=//input[@name='opstina']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[8]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[8]/td[2]/input", "xpath:position"]
+      ],
+      "value": "Zvezdara"
+    }, {
+      "id": "87db0cde-1da7-4d51-abf6-0dcbe456a7b1",
+      "comment": "",
+      "command": "type",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "07074d89-2a82-46e9-b073-993cd7bcb93e",
+      "comment": "",
+      "command": "click",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af9d8358-758c-4dd6-a24b-c7864a799c54",
+      "comment": "",
+      "command": "type",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "1653f259-8b99-42d2-b7bb-1a92c6dd686f",
+      "comment": "",
+      "command": "click",
+      "target": "name=brojsoba",
+      "targets": [
+        ["name=brojsoba", "name"],
+        ["css=tr:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='brojsoba']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[5]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8c337a1-1ed3-43f9-b47a-76ba5f458aec",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "name=drzava",
+      "targets": [
+        ["name=drzava", "name"],
+        ["css=tr:nth-child(6) select", "css:finder"],
+        ["xpath=//select[@name='drzava']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[6]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/select", "xpath:position"]
+      ],
+      "value": "-0.8250732421875,-0.462493896484375"
+    }, {
+      "id": "55843ce0-8512-4be7-8242-0009bdafebef",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "name=drzava",
+      "targets": [
+        ["name=drzava", "name"],
+        ["css=tr:nth-child(6) select", "css:finder"],
+        ["xpath=//select[@name='drzava']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[6]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/select", "xpath:position"]
+      ],
+      "value": "-0.8250732421875,-0.462493896484375"
+    }, {
+      "id": "27fa1cf5-4618-4c97-9da8-21c52721f956",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "name=drzava",
+      "targets": [
+        ["name=drzava", "name"],
+        ["css=tr:nth-child(6) select", "css:finder"],
+        ["xpath=//select[@name='drzava']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[6]/td[2]/select", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]/select", "xpath:position"]
+      ],
+      "value": "-0.8250732421875,-0.462493896484375"
+    }, {
+      "id": "bc2edcbb-7506-4948-a0a1-9510aa2e0a78",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(11) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(11) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[11]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[11]/td[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62b3fbb7-8c6d-491d-a755-bb79b0f94b36",
+      "comment": "",
+      "command": "type",
+      "target": "name=cena",
+      "targets": [
+        ["name=cena", "name"],
+        ["css=tr:nth-child(11) input", "css:finder"],
+        ["xpath=//input[@name='cena']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/table/tbody/tr[11]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[11]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5ccd6d9-3941-45d8-a356-1afbcd3ed364",
+      "comment": "",
+      "command": "click",
+      "target": "id=potvrdi",
+      "targets": [
+        ["id=potvrdi", "id"],
+        ["css=#potvrdi", "css:finder"],
+        ["xpath=//button[@id='potvrdi']", "xpath:attributes"],
+        ["xpath=//div[@id='podaci']/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Potvrdi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b387ec3-567e-45ef-9952-6e9f8ff9616e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.errors li",
+      "targets": [
+        ["css=.errors li", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'The cena field is required.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f58da2eb-1656-4a74-9dae-40e4a137ba16",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.errors li",
+      "targets": [
+        ["css=.errors li", "css:finder"],
+        ["xpath=//div[@id='podaci']/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'The cena field is required.')]", "xpath:innerText"]
+      ],
+      "value": "The cena field is required."
+    }]
+  }, {
+    "id": "df3ab8b9-ad9a-471b-adb2-9963ec6d9b10",
+    "name": "PregledOmiljenihOglasa_TP1",
+    "commands": [{
+      "id": "adc73415-ea77-455c-9b4a-5c5987ca707c",
+      "comment": "Uslov korisnik ima dodate oglase",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/mojiFavoriti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "158e0fb6-7ab2-4445-9109-c922c2eb85f1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0456d8a7-c2c0-4433-9557-15f44a5a1262",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css:finder"],
+        ["xpath=//h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Vaši omiljeni oglasi')]", "xpath:innerText"]
+      ],
+      "value": "Vaši omiljeni oglasi"
+    }, {
+      "id": "470f5277-e087-460b-bd7f-a43cb9fab67d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card-text",
+      "targets": [
+        ["css=.card-text", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Beograd, Sremčica, Novija dvojna kuća na velikom placu od 1511 m2 u mirnoj ulici - idealno za bazen')]", "xpath:innerText"]
+      ],
+      "value": "Beograd, Sremčica, Novija dvojna kuća na velikom placu od 1511 m2 u mirnoj ulici - idealno za bazen"
+    }]
+  }, {
+    "id": "97bdc4a7-f83a-49c3-b258-1a61f3be02bf",
+    "name": "PregledOmiljenihOglasa_TP2",
+    "commands": [{
+      "id": "8855e12b-14e2-4971-ab39-818f80e989f7",
+      "comment": "Uslov korisnik nema dodate oglase",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/mojiFavoriti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "801d9030-4d6f-4131-b8ab-af87151938b1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f33a31cf-c8d0-4bfb-934d-e8dd1c9822cb",
+      "comment": "",
+      "command": "verifyTitle",
+      "target": "radoSTAN",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "711c4249-99c1-48e8-9d26-aab156e7f064",
+    "name": "SortiranjeOglasa_TP1",
+    "commands": [{
+      "id": "026c442a-300e-416a-b217-a8709089b8df",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/mojiFavoriti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fee516f-33f6-49dc-a678-063f02bae048",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25ebab8d-bfc5-41ce-83f2-caedaf21b41f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PRETRAGA",
+      "targets": [
+        ["linkText=PRETRAGA", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'PRETRAGA')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Login/pretraga']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PRETRAGA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "186615c7-221a-479f-a349-80aa326f9dc8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(22) > .col-sm-6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(22) > .col-sm-6:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14214537-523e-49bc-a428-45df0d8c41b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(22) > .col-sm-6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(22) > .col-sm-6:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8e21ab7-87e7-4081-8570-a736811ce8fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(22) > .col-sm-6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(22) > .col-sm-6:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[3]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "025a87a7-1ed2-4bb9-9260-78acc71978de",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectBar",
+      "targets": [],
+      "value": "label=Po ceni rastuće"
+    }, {
+      "id": "94b3f05d-e588-430b-9a72-abacd3c88d36",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "132b64a6-ccd8-47f1-b2a7-cbdc2fc09e91",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "d4e9dcc3-ac53-48d6-bd85-06468f124ee7",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "f69857c8-e4e3-4880-9805-879ef14904b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5654f304-8bba-4fb2-87cd-b211b26ca9e2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/h6[2]", "xpath:idRelative"],
+        ["xpath=//a/div/h6[2]", "xpath:position"],
+        ["xpath=//h6[contains(.,'600 €')]", "xpath:innerText"]
+      ],
+      "value": "600 €"
+    }, {
+      "id": "d3f16a10-5ac8-457e-a5e9-49fbc068671f",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div[2]/div/a/div/h6[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/h6[2]", "xpath:position"],
+        ["xpath=//h6[contains(.,'1200 €')]", "xpath:innerText"]
+      ],
+      "value": "1200 €"
+    }]
+  }, {
+    "id": "a22839ff-921d-46c1-b3e6-fbe15e712bcd",
+    "name": "SortiranjeOglasa_TP2",
+    "commands": [{
+      "id": "c56ef1f7-c113-4f58-aa77-2cc90e99f9a6",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/Login/pretraga",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ffe13f4-3dad-40a8-9904-43d9564d0f96",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c32cafd6-4a9e-42ea-ab5b-7c1142e69b4a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PRETRAGA",
+      "targets": [
+        ["linkText=PRETRAGA", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'PRETRAGA')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Login/pretraga']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PRETRAGA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7536195-68de-48f2-97a9-76caa9d890af",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectBar",
+      "targets": [],
+      "value": "label=Po ceni opadajuće"
+    }, {
+      "id": "cccfa747-71f6-4a75-9332-3fcf843ca71c",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "155941bd-08e8-4da6-86e7-1337a244a2aa",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "a5beb18e-a4e9-4277-8cb4-c0c0c106ef62",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.4000244140625"
+    }, {
+      "id": "e9030105-0cc5-4a28-9bb6-3fc5d1062d40",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c19f6085-25d7-4cc8-9747-ff53a96657f1",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/h6[2]", "xpath:idRelative"],
+        ["xpath=//a/div/h6[2]", "xpath:position"],
+        ["xpath=//h6[contains(.,'1150000 €')]", "xpath:innerText"]
+      ],
+      "value": "1150000 €"
+    }, {
+      "id": "72f93d62-bc9d-4623-826a-65bfa3289b17",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(3)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div[2]/div/a/div/h6[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/h6[2]", "xpath:position"],
+        ["xpath=//h6[contains(.,'1130000 €')]", "xpath:innerText"]
+      ],
+      "value": "1130000 €"
+    }]
+  }, {
+    "id": "40f5281c-ead5-4a1a-a743-4ac411f88b35",
+    "name": "SortiranjeOglasa_TP3",
+    "commands": [{
+      "id": "0214a4d7-4624-4312-9232-c27aaf9bf6dd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/mojiFavoriti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70f879e4-9075-4f29-a363-7da194f09500",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b99afa04-6245-445a-9cdb-31effefb2d0d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PRETRAGA",
+      "targets": [
+        ["linkText=PRETRAGA", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'PRETRAGA')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Login/pretraga']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PRETRAGA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6259c083-b383-4717-ba5f-a98739c33593",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectBar",
+      "targets": [],
+      "value": "label=Po kvadraturi rastuće"
+    }, {
+      "id": "f47fc5e2-3c0b-4cd8-b866-f0fd41d2199f",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "47a49c72-4e6c-4840-b7af-612c2e3ffde8",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "33ea208a-6975-4540-be81-9d316faf814e",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "b91f4936-9697-47a4-b93f-d7fb6815d367",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d968d0e7-1357-417f-938b-d71c4e901328",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/h6", "xpath:idRelative"],
+        ["xpath=//a/div/h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'35 m2')]", "xpath:innerText"]
+      ],
+      "value": "35 m2"
+    }, {
+      "id": "259afb06-a27d-4919-9174-c6e3494c098c",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div[2]/div/a/div/h6", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'41 m2')]", "xpath:innerText"]
+      ],
+      "value": "41 m2"
+    }]
+  }, {
+    "id": "54f9ec86-b405-4e56-a96f-d3819b010850",
+    "name": "SortiranjeOglasa_TP4",
+    "commands": [{
+      "id": "a870a85c-7886-4a8e-8c3f-6703f5fe2276",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/mojiFavoriti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5577a1d4-ab6e-49a4-af93-ebb43b4d3951",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b46826b-a91c-4be8-9633-c67128293b4a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PRETRAGA",
+      "targets": [
+        ["linkText=PRETRAGA", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'PRETRAGA')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Login/pretraga']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PRETRAGA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80c8a154-de32-46e8-934c-5856cfd44ad5",
+      "comment": "",
+      "command": "select",
+      "target": "id=selectBar",
+      "targets": [],
+      "value": "label=Po kvadraturi opadajuće"
+    }, {
+      "id": "25599ee4-9de3-4aa8-827c-c1c3827f9d2a",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "486b420d-0707-450b-94b8-68a762fa4422",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "bd6ab195-3351-4620-b659-85dad281667d",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "id=selectBar",
+      "targets": [
+        ["id=selectBar", "id"],
+        ["name=selectBar", "name"],
+        ["css=#selectBar", "css:finder"],
+        ["xpath=//select[@id='selectBar']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "-0.5875015258789062,-0.399993896484375"
+    }, {
+      "id": "855ff678-df48-4e9c-83a6-33c3d8ac6481",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//input[@value='Filtriraj']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02ac3a46-00d0-42f1-ada3-989ccedcce4f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) h6:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/h6", "xpath:idRelative"],
+        ["xpath=//a/div/h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'35 m2')]", "xpath:innerText"]
+      ],
+      "value": "626 m2"
+    }, {
+      "id": "fced8578-98eb-4663-b100-76b1a7a8ed17",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(2) h6:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div[2]/div/a/div/h6", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'41 m2')]", "xpath:innerText"]
+      ],
+      "value": "600 m2"
+    }]
+  }, {
+    "id": "5805ec83-aed2-46f8-bb30-36a8347bd033",
+    "name": "PretragaOglasa_TP1",
+    "commands": [{
+      "id": "9a528309-9791-4203-9fe0-985891a9451f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/index",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26552d03-5fcc-473e-949e-66ef9c93e9f1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1523x1685",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "929f7709-6b79-472f-ae00-dc4cc1555780",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=PRETRAGA",
+      "targets": [
+        ["linkText=PRETRAGA", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'PRETRAGA')]", "xpath:link"],
+        ["xpath=//a[@href='http://localhost:8080/index.php/Login/pretraga']", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'PRETRAGA')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04462edd-67ae-4675-a10b-cba552626f58",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "596a2b1e-1275-41a4-8f7d-6a6bdd944308",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "fda"
+    }, {
+      "id": "e29f8bee-c8da-418b-90a8-d23ba33876ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=#prazno > p",
+      "targets": [
+        ["css=#prazno > p", "css:finder"],
+        ["xpath=//div[@id='prazno']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ne postoje oglasene nekretnine za zadatu pretragu!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43ab2f39-f6d6-42a2-9c04-cd5a0a8401fd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#prazno > p",
+      "targets": [
+        ["css=#prazno > p", "css:finder"],
+        ["xpath=//div[@id='prazno']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ne postoje oglasene nekretnine za zadatu pretragu!')]", "xpath:innerText"]
+      ],
+      "value": "Ne postoje oglasene nekretnine za zadatu pretragu!"
+    }]
+  }, {
+    "id": "8c32dd2e-70b5-48de-ac52-608a53ba440d",
+    "name": "PretragaOglasa_TP2",
+    "commands": [{
+      "id": "ee4d5503-4081-4983-9ae1-b18026a0f9d2",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/pretraga",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8f97ddb-83bf-4126-8cb9-030c7f576f1e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1527x1689",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22ff0bc2-1326-4e96-9c71-140c6808a7ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "581e40cb-f3c9-434d-8f39-9c394da4f11f",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "kratkorocno"
+    }, {
+      "id": "eb377ce5-9f00-49f0-afdf-39f28c135c5d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.card-text",
+      "targets": [
+        ["css=.card-text", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div[2]/p", "xpath:idRelative"],
+        ["xpath=//a/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Novi stan, niko nije ziveo u njemu')]", "xpath:innerText"]
+      ],
+      "value": "Novi stan, niko nije ziveo u njemu"
+    }]
+  }, {
+    "id": "8eb46c13-83ff-430d-b68a-7ee764e4520d",
+    "name": "PretragaOglasa_TP3",
+    "commands": [{
+      "id": "7661fe0c-d406-4d76-a42e-d7b7dfd5a2ed",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed3aeb65-2d3f-4424-bcea-4e895990bf47",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bfba641-6c41-409d-ad77-06eeb93dd7ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27174465-cc1f-4f5d-9e07-0f68eec04e67",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchBar",
+      "targets": [
+        ["id=searchBar", "id"],
+        ["name=searchBar", "name"],
+        ["css=#searchBar", "css:finder"],
+        ["xpath=//input[@id='searchBar']", "xpath:attributes"],
+        ["xpath=//form/div/input", "xpath:position"]
+      ],
+      "value": "fdsa"
+    }, {
+      "id": "0c34cdcc-6b1e-4aaa-a923-a8b006aa6789",
+      "comment": "",
+      "command": "click",
+      "target": "css=#prazno > p",
+      "targets": [
+        ["css=#prazno > p", "css:finder"],
+        ["xpath=//div[@id='prazno']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ne postoje oglasene nekretnine za zadatu pretragu!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f94a8d6c-d205-4e9e-9d0d-4fbd9beb4c27",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#prazno > p",
+      "targets": [
+        ["css=#prazno > p", "css:finder"],
+        ["xpath=//div[@id='prazno']/p", "xpath:idRelative"],
+        ["xpath=//div[4]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Ne postoje oglasene nekretnine za zadatu pretragu!')]", "xpath:innerText"]
+      ],
+      "value": "Ne postoje oglasene nekretnine za zadatu pretragu!"
+    }, {
+      "id": "0478d3db-fa72-446f-bde0-6d68b304e7f2",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1db54075-997f-4d79-839c-3a2f00db4384",
+    "name": "PrikazivanjeDetaljaOglasa_TP1",
+    "commands": [{
+      "id": "33232855-2e02-47e7-b804-1e0880f3a3d3",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8080/index.php/Login/pretraga",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04f171eb-9cf8-41d0-a38b-b37a0cbf8c54",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1525x1686",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9161044-46f7-41b7-852d-48280396caba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-sm-3:nth-child(1) .card-text",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-sm-3:nth-child(1) .card-text", "css:finder"],
+        ["xpath=//div[@id='oglasi']/div/div/div/a/div/p", "xpath:idRelative"],
+        ["xpath=//a/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Beograd, Sremčica, Novija dvojna kuća na velikom placu od 1511 m2 u mirnoj ulici - idealno za bazen')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6459bc67-f83d-4971-a9c1-bb8cab1562dc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.table:nth-child(1) b",
+      "targets": [
+        ["css=.table:nth-child(1) b", "css:finder"],
+        ["xpath=//div[@id='info']/table/tbody/tr/td/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"],
+        ["xpath=//b[contains(.,'Osnovne informacije')]", "xpath:innerText"]
+      ],
+      "value": "Osnovne informacije"
+    }, {
+      "id": "61164380-01da-4525-a489-6d7cecade039",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.table:nth-child(2) b",
+      "targets": [
+        ["css=.table:nth-child(2) b", "css:finder"],
+        ["xpath=//div[@id='info']/table[2]/tbody/tr/td/b", "xpath:idRelative"],
+        ["xpath=//table[2]/tbody/tr/td/b", "xpath:position"],
+        ["xpath=//b[contains(.,'Opremljenost')]", "xpath:innerText"]
+      ],
+      "value": "Opremljenost"
+    }]
+  }],
+  "suites": [{
+    "id": "40da1eb1-6695-4fc0-89b0-87bac30fe3c6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ca8bee8f-7611-478e-bf30-fa4d91bff468"]
+  }],
+  "urls": ["http://localhost:8080/Guest/pretragaGost", "http://localhost:8080/index.php/Login/oglasiNekretninu", "http://localhost:8080/index.php/Login/mojiFavoriti", "http://localhost:8080/index.php/Login/index", "http://localhost:8080/index.php/Login/pretraga"],
+  "plugins": []
+}

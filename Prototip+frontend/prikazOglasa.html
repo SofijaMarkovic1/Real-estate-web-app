@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radoSTAN</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="prikazOglasa.js"></script>
+</head>
+<body>
+    <div class="container-fluid" style="padding-left: 0%; padding-right: 0%;">
+        <header>
+            <div class="row header1">
+                <nav class="navbar navbar-expand-lg navbar-light " style="padding-top: 0%; padding-bottom: 0%;">
+                <div class="col-sm-1 col-1"><a class="navbar-brand" href="index.html"><img src="images/Radostan logo.png" height="110px" style="padding-left: 15%;"></a></div>
+                <div class="col-sm-8 col-8">
+                    <div class="row">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="collapse navbar-collapse" style="padding-left: 40%;">
+                            <ul class="navbar-nav" style="padding-top: 7%;"> <!-- Add ml-auto class here -->
+                                <li class="nav-item mojNav" style="padding: 6px;">
+                                    <a class="nav-link" href="index.html" style="display: inline;">POČETNA</a>
+                                    
+                                </li>
+                                <li class="nav-item mojNav" style="padding: 6px;">
+                                    <a class="nav-link" href="pretraga.html" style="display: inline;">PRETRAGA</a> 
+                                </li>
+                                <li class="nav-item mojNav" style="padding-top: 6px; padding-left: 0px;">
+                                    <a class="nav-link" href="mojiOglasi.html" style="display: inline;">MOJI OGLASI</a> 
+                                </li>
+                                <li class="nav-item mojNav" style="padding-top: 6px; padding-left: 0px;">
+                                    <a class="nav-link" href="oglasiNekretninu.html" style="display: inline;"> OGLASI NEKRETNINU</a> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-3 col-3" style="padding-top: 0%; padding-bottom: 0%;">
+                    <div class="row" style="height: 50%;">
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav" style="padding: 0%;"> <!-- Add ml-auto class here -->
+                                <li class="nav-item meni-item" style="padding: 6px;">
+                                    <img src="images/srce.png" width="30px" style="display: inline;"> <a class="nav-link active" href="mojiFavoriti.html" style="display: inline;">Moji favoriti</a>
+                                    
+                                </li>
+                                <li class="nav-item meni-item" style="padding: 6px;">
+                                    <div class="dropdown">
+                                        <img src="images/user.png" width="20px" style="display: inline;"> <a href="mojProfil.html" class="nav-link dropdown-toggle"  style="display: inline;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Moj profil</a>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="menuD">
+                                          <li><a class="dropdown-item" href="mojProfil.html">Prikaži profil</a></li>
+                                          <li><a class="dropdown-item" href="izmeniPodatke.html">Izmeni podatke</a></li>
+                                          <li><a class="dropdown-item" href="login.html">Odjavi se</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="nav-item meni-item" style="padding-top: 6px; padding-left: 0px;">
+                                    <img src="images/phone.png" width="20px" style="display: inline;"> <a class="nav-link" href="#" style="display: inline;">+381 65 266-8603</a> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="height: 50px;"></div>
+                    
+                </div>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="row" style="overflow: auto;">
+            <div class="col-sm-3 filters">
+                <!--ovde ide bar sa filterima-->
+                <form>
+                    <label for="customRange1" class="form-label">Minimalna cena: </label> <label id="minCenaLabela"></label>
+                    <input type="range" class="form-range custom-range" id="minCena" min="0" max="200000" step="10000">
+                    <label for="customRange1" class="form-label">Maksimalna cena:</label> <label id="maxCenaLabela"></label>
+                    <input type="range" class="form-range custom-range" id="maxCena" min="0" max="200000" step="10000">
+                    <label for="customRange1" class="form-label">Minimalna kvadratura: </label> <label id="minKvadraturaLabela"></label>
+                    <input type="range" class="form-range custom-range" id="minKvadratura" min="0" max="1000" step="10">
+                    <label for="customRange1" class="form-label">Maksimalna kvadratura:</label> <label id="maxKvadraturaLabela"></label>
+                    <input type="range" class="form-range custom-range" id="maxKvadratura" min="0" max="1000" step="10">
+                    <div class="row">
+                        <div id="opstine" class="col-sm-6" style="margin-right: 5px solid rgb(149, 148, 148);">
+                            <h6>Opština:</h6>
+                            <input type="checkbox" class="form-check-input"> Čukarica<br>
+                            <input type="checkbox" class="form-check-input"> Novi Beograd<br>
+                            <input type="checkbox" class="form-check-input"> Palilula<br>
+                            <input type="checkbox" class="form-check-input"> Rakovica<br>
+                            <input type="checkbox" class="form-check-input"> Savski venac<br>
+                            <input type="checkbox" class="form-check-input"> Stari grad<br>
+                            <input type="checkbox" class="form-check-input"> Voždovac<br>
+                            <input type="checkbox" class="form-check-input"> Vračar<br>
+                            <input type="checkbox" class="form-check-input"> Zemun<br>
+                            <input type="checkbox" class="form-check-input"> Zvezdara<br>
+                            <input type="checkbox" class="form-check-input"> Barajevo<br>
+                            <input type="checkbox" class="form-check-input"> Grocka<br>
+                            <input type="checkbox" class="form-check-input"> Lazarevac<br>
+                            <input type="checkbox" class="form-check-input"> Mladenovac<br>
+                            <input type="checkbox" class="form-check-input"> Obrenovac<br>
+                            <input type="checkbox" class="form-check-input"> Sopot<br>
+                            <input type="checkbox" class="form-check-input"> Surčin<br>
+                        </div>
+                        <div id="opremljenostIGrejanje" class="col-sm-6">
+                                <h6>Opremljenost:</h6>
+                                <input type="checkbox" class="form-check-input"> lift<br>
+                                <input type="checkbox" class="form-check-input"> terasa<br>
+                                <input type="checkbox" class="form-check-input"> garaža<br>
+                                <input type="checkbox" class="form-check-input"> parking<br>
+                                <input type="checkbox" class="form-check-input"> recepcija<br>
+                                <input type="checkbox" class="form-check-input"> dvorište<br>
+                                <input type="checkbox" class="form-check-input"> bazen<br>
+                                <input type="checkbox" class="form-check-input"> prilaz za osobe sa invaliditetom<br><br>
+                                <h6>Grejanje:</h6>
+                                <input type="checkbox" class="form-check-input"> centralno<br>
+                                <input type="checkbox" class="form-check-input"> etažno<br>
+                                <input type="checkbox" class="form-check-input"> termoakumulcaione peći<br>
+                                <input type="checkbox" class="form-check-input"> podno grejanje<br>
+                                <input type="checkbox" class="form-check-input"> klima uređaj<br>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row" id="tip">
+                        <div class="col-sm-6">
+                            <h6>Tip nekretnine:</h6>
+                            <input type="checkbox" class="form-check-input"> kuća<br>
+                            <input type="checkbox" class="form-check-input"> stan<br>
+                            <input type="checkbox" class="form-check-input"> garsonjera<br>
+                            <input type="checkbox" class="form-check-input"> plac<br>
+                            <input type="checkbox" class="form-check-input"> vikendica<br>
+                            <input type="checkbox" class="form-check-input"> poslovni prostor<br>
+                            <input type="checkbox" class="form-check-input"> garaža<br>
+                            <input type="checkbox" class="form-check-input"> parking mesto<br>
+                            <input type="checkbox" class="form-check-input"> parcela<br>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6>Stanje nekretnine:</h6>
+                            <input type="checkbox" class="form-check-input"> novogradnja<br>
+                            <input type="checkbox" class="form-check-input"> stara gradnja<br>
+                            <input type="checkbox" class="form-check-input"> za renoviranje<br>
+                            <input type="checkbox" class="form-check-input"> renovirano<br>
+                            <input type="checkbox" class="form-check-input"> za rušenje<br>
+                            <input type="checkbox" class="form-check-input"> u izgradnji<br>
+                        </div>
+                    </div>
+                    <input type="submit" value="Filtriraj" class="btn btn-outline-dark" style="margin-left: 35%;" disabled>
+                </form>
+            </div>
+            <div class="col-sm-9">
+                <!--ovde ide prikaz oglasa + search-->
+                <div class="row" style="padding-left: 20%; padding-right: 20%; margin-top: 10px;">
+                <form>
+                    <div class="input-group">
+                        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+                        <input type="submit" class="btn btn-outline-dark" value="Pretraga" disabled>
+                    </div>
+                    <br>
+                    <select class="form-select" id="selectBar">
+                        <option selected>Sortiraj</option>
+                        <option value="1">Po ceni rastuće</option>
+                        <option value="2">Po ceni opadajuće</option>
+                        <option value="3">Po kvadraturi rastuće</option>
+                        <option value="3">Po kvadraturi opadajuće</option>
+                    </select>
+                </form>
+                </div>
+                <hr>
+                <div class="row" id="oglasi">
+                    <div class="row">
+                        <div class="col-sm-8" id="slikeIOpis">
+                            <div class="carousel slide" data-ride="carousel" id="oglasSlajder">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active" id="0">
+                                    <img class="d-block w-100" src="images/carousel/dnevna.jpg" alt="First slide" height="600px" width="700px">
+                                  </div>
+                                  <div class="carousel-item" id="1">
+                                    <img class="d-block w-100" src="images/carousel/kuhinja.jpg" alt="Second slide" height="600px" width="700px">
+                                  </div>
+                                  <div class="carousel-item" id="2">
+                                    <img class="d-block w-100" src="images/carousel/kupatilo.jpg" alt="Third slide" height="600px" width="700px">
+                                  </div>
+                                  <div class="carousel-item" id="3">
+                                    <img class="d-block w-100" src="images/carousel/spavaca.jpg" alt="Fourth slide" height="600px" width="700px">
+                                  </div>
+                                  <div class="carousel-item" id="4">
+                                    <img class="d-block w-100" src="images/carousel/balkon.jpg" alt="Fifth slide" height="600px" width="700px">
+                                  </div>
+                                </div>
+                                <a class="carousel-control-prev" role="button" data-slide="prev" id="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" role="button" data-slide="next" id="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="sr-only">Next</span>
+                                </a>
+                              </div>
+                              <br>
+                              <div class="row" id="opis" style="margin-left: 10px;">
+                                <p>Na Vračaru se nalazi ovaj prostrani i moderno uređeni stan koji će vas oduševiti svojom elegancijom i udobnošću. Smešten na mirnoj i drvoredima okruženoj ulici, ovaj stan je idealan za one koji žele živeti u mirnom i prestižnom delu grada.
+
+                                    Stan se prostire na 125 kvadratnih metara i sastoji se od prostranog dnevnog boravka koji je osmišljen kao otvoreni koncept s modernom kuhinjom. Svetle boje i veliki prozori doprinose osećaju prozračnosti i obilju prirodnog svetla.
+                                    
+                                    Kuhinja je opremljena najnovijim aparatima i modernim elementima, pružajući Vam izvanredno iskustvo kuvanja. Uz to, stan ima i dodatni prostor za spremanje, idealno za odlaganje kućnih aparata i posuđa.
+                                    
+                                    Spavaće sobe su prostrane i udobne, s dovoljno mesta za ugradne ormare i ostale komade nameštaja. Glavna spavaća soba ima vlastito privatno kupatilo koje je opremljeno luksuznim detaljima, kao što su moderni tuševi i elegantna keramika.
+                                    
+                                    Stan takođe ima dodatno kupatilo koje je lepo uređeno i opremljeno kvalitetnim sanitarnim uređajima. Tu je i dodatni prostor koji se može koristiti kao radna soba ili prostor za rekreaciju prema Vašim potrebama.
+                                    
+                                    Uživajte u sunčanim danima na prostranoj terasi s pogledom na zelenilo i okolne vrtove. Ovo je idealno mesto za opuštanje, druženje s prijateljima ili uživanje u šoljici kafe dok uživate u mirnom ambijentu.
+                                    
+                                    Stan se nalazi u blizini svih potrebnih sadržaja kao što su prodavnice, restorani, škole i parkovi. Dodatno, dobro je povezan s javnim prevozom, što Vam omogućava jednostavan pristup drugim delovima grada.
+                                    
+                                    Ovaj prekrasan stan na Vračaru pružiće Vam savršen spoj udobnosti, luksuza i praktičnosti. Ne propustite priliku da postanete vlasnik ove nekretnine i uživate u vrhunskom životnom iskustvu na jednoj od najprestižnijih lokacija u gradu.</p>
+                              </div>
+                        </div>
+                        <div class="col-sm-4" id="info">
+                            <table class="table table-bordered text-center" style="margin-top: 10px;">
+                                <tr>
+                                    <td colspan="2"><b>Osnovne informacije</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Tip nekretnine</td>
+                                    <td>Stan</td>
+                                </tr>
+                                <tr>
+                                    <td>Kvadratura</td>
+                                    <td>115m2</td>
+                                </tr>
+                                <tr>
+                                    <td>Broj soba</td>
+                                    <td>3.5</td>
+                                </tr>
+                                <tr>
+                                    <td>Grejanje</td>
+                                    <td>Centralno</td>
+                                </tr>
+                                <tr>
+                                    <td>Stanje</td>
+                                    <td>Novo</td>
+                                </tr>
+                                <tr>
+                                    <td>Adresa</td>
+                                    <td>Mutapova 10</td>
+                                </tr>
+                                <tr>
+                                    <td>Opština</td>
+                                    <td>Vračar</td>
+                                </tr>
+                                
+                            </table>
+                            
+                            <table class="table table-bordered text-center" style="margin-top: 20px;">
+                                <tr>
+                                    <td colspan="2"><b>Opremljenost</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Terasa</td>
+                                    <td>da</td>
+                                </tr>
+                                <tr>
+                                    <td>Garaža</td>
+                                    <td>da</td>
+                                </tr>
+                                <tr>
+                                    <td>Bazen</td>
+                                    <td>ne</td>
+                                </tr>
+                                <tr>
+                                    <td>Lift</td>
+                                    <td>da</td>
+                                </tr>
+                                <tr>
+                                    <td>Parking</td>
+                                    <td>da</td>
+                                </tr>
+                                <tr>
+                                    <td>Recepcija</td>
+                                    <td>ne</td>
+                                </tr>
+                                <tr>
+                                    <td>Dvorište</td>
+                                    <td>ne</td>
+                                </tr>
+                                
+                            </table>
+                            <table class="table table-bordered text-center" style="margin-top: 20px;">
+                                <tr>
+                                    <td colspan="2"><b>Prodavac nekretnine</b></td>
+                                </tr>
+                                <tr>
+                                    <td>Ime i Prezime</td>
+                                    <td>Sofija Marković</td>
+                                </tr>
+                                <tr>
+                                    <td>Broj telefona</td>
+                                    <td>+381 65 2668603</td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td>
+                                    <td>sofijazm8@gmail.com</td>
+                                </tr>
+                            </table>
+                            <br><br>
+                            <div class="container">
+                                <h4>Zakažite termin posete nekretnini:</h4>
+                                <br>
+                                <div class="form-group">
+                                  <label for="datepicker">Izaberite datum:</label>
+                                  <input type="datetime-local" id="datepicker" class="form-control">
+                                  <br>
+                                  
+                                  <button class="btn btn-outline-dark" id="emailButton" style="margin-bottom: 20px;">Zakaži</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="row header1" style="padding-top: 16px; margin-top: 6px; margin-bottom: 0px; height: max-content;" >
+            <!--<footer class="text-center" > -->
+            <p class="text-center">Projaktni zadatak na predmetu Principi softverskog inženjerstva, 2023. godina</p>
+            
+        </footer>
+    </div>
+</body>
+</html>
